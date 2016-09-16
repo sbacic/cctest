@@ -1,0 +1,20 @@
+{
+    "name": "sbacic/cctest",
+    "authors": [
+        {
+            "name": "Slaven Bacic",
+            "email": "bacic.slaven@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "sbacic\\cctest\\": "src/"
+        }
+    },
+    "require": {
+        "codeception/codeception": "^2.2"
+    },
+    "scripts": {
+      "coverage" : ["codecept run unit --coverage-html"]
+    }
+}

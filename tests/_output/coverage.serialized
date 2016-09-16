@@ -1,0 +1,44 @@
+<?php
+$coverage = new SebastianBergmann\CodeCoverage\CodeCoverage;
+$coverage->setData(array (
+  '/home/sbacic/Projects/cctest/src/Foo.php' => 
+  array (
+    8 => 
+    array (
+      0 => 'FooTest::testFun1',
+    ),
+    9 => NULL,
+  ),
+  '/home/sbacic/Projects/cctest/src/Bar.php' => 
+  array (
+    7 => 
+    array (
+    ),
+    8 => 
+    array (
+    ),
+    9 => 
+    array (
+    ),
+  ),
+));
+$coverage->setTests(array (
+  'FooTest::testFun1' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'UNCOVERED_FILES_FROM_WHITELIST' => 
+  array (
+    'size' => 'unknown',
+    'status' => NULL,
+  ),
+));
+
+$filter = $coverage->filter();
+$filter->setWhitelistedFiles(array (
+  '/home/sbacic/Projects/cctest/src/Foo.php' => true,
+  '/home/sbacic/Projects/cctest/src/Bar.php' => true,
+));
+
+return $coverage;
