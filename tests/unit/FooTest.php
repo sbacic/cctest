@@ -6,7 +6,7 @@ class FooTest extends PHPUnit_Framework_TestCase {
 
   public static function setUpBeforeClass()
   {
-    // chdir('tests/unit');
+    chdir('tests/unit');
   }
 
   public function testFun1()
